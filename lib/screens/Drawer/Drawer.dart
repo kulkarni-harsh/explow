@@ -26,11 +26,6 @@ class NavigationDrawer extends StatelessWidget {
             onTap: () => Get.toNamed("/searchpage/RickAstley"),
           ),
           ListTile(
-            leading: Icon(Icons.search),
-            title: Text("POPUP"),
-            onTap: () => Get.toNamed("/info/tt4052886"),
-          ),
-          ListTile(
             leading: Icon(Icons.menu_book),
             title: Text("Entertainment News"),
             onTap: () => Get.toNamed("/news/"),

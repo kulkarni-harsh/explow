@@ -1,11 +1,8 @@
 import 'dart:ui';
 
-import 'package:explow/components/Header.dart';
 import 'package:explow/components/SearchField.dart';
 import 'package:explow/constants/constants.dart';
-import 'package:explow/controllers/showcontroller.dart';
 import 'package:explow/screens/Drawer/Drawer.dart';
-import 'package:explow/screens/SearchPage/SearchPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
@@ -52,9 +49,11 @@ class HomePage extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                   ),
                   onPressed: () => Get.toNamed("/news/"),
-                  child: Text(
-                    "Get Entertainment News",
-                    style: kSubTitleStyle.copyWith(color: Colors.black),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Text("Get Entertainment News",
+                        style: kSubTitleStyle.copyWith(
+                            color: Colors.black, fontSize: 25)),
                   ),
                 ),
                 Spacer()

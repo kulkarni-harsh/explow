@@ -4,7 +4,6 @@ import 'package:explow/components/ShowType.dart';
 import 'package:explow/constants/constants.dart';
 import 'package:explow/controllers/showcontroller.dart';
 import 'package:explow/screens/Drawer/Drawer.dart';
-import 'package:explow/services/api/APIservices.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
@@ -139,7 +138,6 @@ class SearchPage extends StatelessWidget {
         showController.showList[index].image.url,
         fit: BoxFit.fill,
       );
-      ;
       return j;
     } catch (e) {
       return Icon(Icons.movie, size: 50);

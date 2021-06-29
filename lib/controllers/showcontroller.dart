@@ -1,4 +1,3 @@
-import 'package:explow/model/Show.dart';
 import 'package:explow/services/api/APIservices.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
