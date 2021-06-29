@@ -65,7 +65,6 @@ class NewsPage extends StatelessWidget {
                   minWidth: 90.0,
                   minHeight: 70.0,
                   initialLabelIndex: 0,
-
                   cornerRadius: 20.0,
                   activeFgColor: Colors.white,
                   inactiveBgColor: Colors.grey,
@@ -77,10 +76,8 @@ class NewsPage extends StatelessWidget {
                     [Colors.blueAccent, Colors.redAccent],
                     [Colors.green, Colors.orange]
                   ],
-                  animate:
-                      true, // with just animate set to true, default curve = Curves.easeIn
-                  curve: Curves
-                      .bounceInOut, // animate must be set to true when using custom curve
+                  animate: true,
+                  curve: Curves.bounceInOut,
                   onToggle: (index) {
                     newsController.fetchNews(index == 0 ? "us" : "in");
                     print('switched to: $index');
@@ -128,7 +125,9 @@ class NewsPage extends StatelessWidget {
                           bottom: 0,
                           child: Container(
                               padding: EdgeInsets.all(8),
-                              width: MediaQuery.of(context).size.width / 4 - 3,
+                              width: isPhone(context)
+                                  ? MediaQuery.of(context).size.width / 2 - 3
+                                  : MediaQuery.of(context).size.width / 4 - 3,
                               child: Text(
                                 "${newsController.news[index].title}",
                                 textWidthBasis: TextWidthBasis.parent,

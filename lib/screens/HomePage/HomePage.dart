@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:explow/components/Header.dart';
 import 'package:explow/components/SearchField.dart';
 import 'package:explow/constants/constants.dart';
 import 'package:explow/controllers/showcontroller.dart';
@@ -28,13 +29,35 @@ class HomePage extends StatelessWidget {
                 Text(
                   "EXPLOW",
                   style: kTitleStyle.copyWith(
-                      fontSize: MediaQuery.of(context).size.height >
-                              MediaQuery.of(context).size.width
-                          ? 150
-                          : 200,
+                      fontSize: isPhone(context) ? 100 : 200,
                       color: Colors.white),
                 ),
-                SearchField(mycontroller: mycontroller)
+                SizedBox(height: 15),
+                Text(
+                  "Your Favorite Media Explorer",
+                  overflow: TextOverflow.clip,
+                  textAlign: TextAlign.center,
+                  style: kSubTitleStyle,
+                ),
+                Spacer(),
+                SearchField(mycontroller: mycontroller),
+                Spacer(),
+                Text(
+                  "OR",
+                  style: kSubTitleStyle,
+                ),
+                Spacer(),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                  ),
+                  onPressed: () => Get.toNamed("/news/"),
+                  child: Text(
+                    "Get Entertainment News",
+                    style: kSubTitleStyle.copyWith(color: Colors.black),
+                  ),
+                ),
+                Spacer()
               ],
             ),
           ),

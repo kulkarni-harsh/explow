@@ -1,6 +1,7 @@
 import 'package:explow/constants/constants.dart';
 import 'package:explow/controllers/showcontroller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class Header extends StatelessWidget {
   const Header({
@@ -28,9 +29,12 @@ class Header extends StatelessWidget {
               onPressed: showController.openDrawer,
             ),
             Spacer(),
-            Text(
-              "EXPLOW",
-              style: kTitleStyle,
+            GestureDetector(
+              child: Text(
+                "EXPLOW",
+                style: kTitleStyle,
+              ),
+              onTap: () => Get.toNamed('/'),
             ),
             Spacer(),
             Icon(
