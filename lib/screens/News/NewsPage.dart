@@ -97,7 +97,7 @@ class NewsPage extends StatelessWidget {
                 padding: EdgeInsets.all(20),
                 mainAxisSpacing: 4,
                 crossAxisSpacing: 4,
-                crossAxisCount: 8,
+                crossAxisCount: isPhone(context) ? 4 : 8,
                 itemCount: newsController.news.length,
                 staggeredTileBuilder: (index) => StaggeredTile.count(
                     2, index.isEven && index % 5 != 0 ? 1.5 : 2),
@@ -132,7 +132,10 @@ class NewsPage extends StatelessWidget {
                               child: Text(
                                 "${newsController.news[index].title}",
                                 textWidthBasis: TextWidthBasis.parent,
-                                style: kSubTitleStyle,
+                                style: isPhone(context)
+                                    ? kSubTitleStyleMini
+                                    : kSubTitleStyle,
+                                overflow: TextOverflow.ellipsis,
                               ),
                               decoration: BoxDecoration(
                                   color: kPrimaryColorDark.withOpacity(0.9))),

@@ -73,7 +73,8 @@ class SearchPage extends StatelessWidget {
                                     SizedBox(
                                       height: 10,
                                     ),
-                                    Expanded(child: showShortDetails(index))
+                                    Expanded(
+                                        child: showShortDetails(context, index))
                                   ],
                                 ),
                               )),
@@ -85,7 +86,7 @@ class SearchPage extends StatelessWidget {
     );
   }
 
-  Widget showShortDetails(int index) {
+  Widget showShortDetails(BuildContext context, int index) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
@@ -97,7 +98,9 @@ class SearchPage extends StatelessWidget {
                   ? showController.showList[index].title
                   : "",
               textAlign: TextAlign.left,
-              style: kSubTitleStyle.copyWith(color: Colors.white),
+              style: isPhone(context)
+                  ? kSubTitleStyleMini.copyWith(color: Colors.white)
+                  : kSubTitleStyle.copyWith(color: Colors.white),
               overflow: TextOverflow.ellipsis,
             ),
           ),
@@ -112,13 +115,17 @@ class SearchPage extends StatelessWidget {
                   ? "${showController.showList[index].year}."
                   : "",
               textAlign: TextAlign.left,
-              style: kShowCardDetailsText),
+              style: isPhone(context)
+                  ? kShowCardDetailsTextMini
+                  : kShowCardDetailsText),
           Expanded(
             child: Text(
                 showController.showList[index].runningTimeInMinutes != null
                     ? "${showController.showList[index].runningTimeInMinutes} Mins."
                     : "",
-                style: kShowCardDetailsText),
+                style: isPhone(context)
+                    ? kShowCardDetailsTextMini
+                    : kShowCardDetailsText),
           ),
         ],
       ),
