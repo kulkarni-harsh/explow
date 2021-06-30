@@ -1,16 +1,45 @@
-# explow
+![Flutter_Logo](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+# EXPLOW
+## Get All Entertainment Info.
+![explow logo](https://user-images.githubusercontent.com/70194206/123989003-1c927d80-d9e6-11eb-86c1-850986b67a66.png)
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Explow is a `Shows & Movies Explorer` that allows `users` to `search their favourite shows & get Entertainment News Easily`.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Explow provides a very simple way of getting Entertainment Information.
+## Prerequisites
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Before you begin, ensure you have met the following requirements:
+* You have a working Internet connection & any prominent Web Browser.
+
+## Running Explow
+
+To run Explow, head over to Below Website
+https://explow-a651a.web.app/#/
+
+## Features
+1. Responsive UI.
+2. Concise Information regarding Shows.
+3. Get Hollywood & Bollywood Top News Instantly.
+
+## Screenshots
+![s1](https://user-images.githubusercontent.com/70194206/123991674-8b70d600-d9e8-11eb-9d8b-b82fa7908c31.png)
+
+![s2](https://user-images.githubusercontent.com/70194206/123991690-8f045d00-d9e8-11eb-84b5-9ed545538338.png)
+
+![s3](https://user-images.githubusercontent.com/70194206/123991706-93307a80-d9e8-11eb-9996-de6bc864d8ee.png)
+
+![image](https://user-images.githubusercontent.com/70194206/123992029-dbe83380-d9e8-11eb-804d-230810a49677.png)
+
+
+## Contributors
+
+* [@kulkarni-harsh] (https://github.com/kulkarni-harsh) 📖
+
+
+## Contact
+
+If you want to contact me you can reach me at <harsh.kulkarni.42774@gmail.com>.
+
