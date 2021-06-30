@@ -5,6 +5,7 @@ class ApiService {
   static var client = http.Client();
   static const String _baseUrl = "imdb8.p.rapidapi.com";
   static const _api_key = '9c3e69e1d1msh207fde56b7dc8d7p15f31bjsn0f41dba62f0f';
+
   static const Map<String, String> _headers = {
     "content-type": "application/json",
     "x-rapidapi-host": "imdb8.p.rapidapi.com",

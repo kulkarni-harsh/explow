@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:explow/constants/constants.dart';
 import 'package:explow/controllers/NewsController.dart';
 import 'package:explow/screens/Drawer/Drawer.dart';
@@ -45,9 +47,18 @@ class NewsPage extends StatelessWidget {
                     style: kTitleStyle,
                   ),
                   Spacer(),
-                  Icon(
-                    Icons.info_outline,
-                    size: 45,
+                  IconButton(
+                    icon: Icon(
+                      Icons.info_outline,
+                      size: 45,
+                    ),
+                    onPressed: () {
+                      int i = Random().nextInt(10);
+                      if (i.isEven)
+                        _launchURL("https://github.com/kulkarni-harsh/explow");
+                      else
+                        _launchURL("https://youtu.be/dQw4w9WgXcQ");
+                    },
                   )
                 ],
               ),
@@ -120,6 +131,13 @@ class NewsPage extends StatelessWidget {
                           fit: BoxFit.fill,
                           height: double.infinity,
                           width: double.infinity,
+                          loadingBuilder: (context, child, loadingProgress) {
+                            if (loadingProgress == null) return child;
+
+                            return Center(child: CircularProgressIndicator());
+                          },
+                          errorBuilder: (context, error, stackTrace) =>
+                              Text('Some errors occurred!'),
                         ),
                         Positioned(
                           bottom: 0,
