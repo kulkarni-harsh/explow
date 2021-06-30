@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 
 class InfoApi {
   static var client = http.Client();
-  static const String _baseUrl = "http://www.omdbapi.com/?i=";
+  static const String _baseUrl = "https://www.omdbapi.com/?i=";
   static const String _apiKey = "bd16e114";
 
   static Future<Info> getapi(String s) async {
