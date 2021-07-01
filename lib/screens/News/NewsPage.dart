@@ -1,3 +1,4 @@
+import 'dart:html';
 import 'dart:math';
 
 import 'package:explow/constants/constants.dart';
@@ -137,7 +138,20 @@ class NewsPage extends StatelessWidget {
                             return Center(child: CircularProgressIndicator());
                           },
                           errorBuilder: (context, error, stackTrace) =>
-                              Text('Some errors occurred!'),
+                              newsController.news[index].urlToImage == null
+                                  ? Center(child: Text("Some Error Occured"))
+                                  : Image.network(
+                                      "${newsController.news[index].urlToImage}",
+                                      fit: BoxFit.fill,
+                                      height: double.infinity,
+                                      width: double.infinity,
+                                      errorBuilder: (a, b, c) => Image.network(
+                                        "https://via.placeholder.com/728x90.png?text=News",
+                                        fit: BoxFit.fill,
+                                        height: double.infinity,
+                                        width: double.infinity,
+                                      ),
+                                    ),
                         ),
                         Positioned(
                           bottom: 0,
