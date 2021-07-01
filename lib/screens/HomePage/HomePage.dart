@@ -55,7 +55,8 @@ class HomePage extends StatelessWidget {
                       padding: const EdgeInsets.all(12),
                       child: Text("Get Entertainment News",
                           style: kSubTitleStyle.copyWith(
-                              color: Colors.black, fontSize: 25)),
+                              color: Colors.black,
+                              fontSize: isPhone(context) ? 15 : 25)),
                     ),
                   ),
                   Spacer()
